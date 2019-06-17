@@ -1,0 +1,19 @@
+const menu = {
+  mealOne: ['Nachos', 'Wings', 'Cheesy Fries', 'Bloomin\' Onion', 'Mozzarella Sticks'],
+  mealTwo: ['Chicken', 'Beef', 'Turkey', 'Salmon', 'Crab'],
+  mealThree: ['Applie Pie', 'Ice Cream Cake', 'Doughnuts', 'Fried Ice Cream', 'Churros' ],
+  get _mealOne () {
+return this.mealOne[Math.floor(Math.random() * this.mealOne.length)]
+  },
+  get _mealTwo () {
+return this.mealTwo[Math.floor(Math.random() * this.mealTwo.length)]
+  },
+  get _mealThree () {
+return this.mealThree[Math.floor(Math.random() * this.mealThree.length)]
+  },
+  getRandomMeal: function () {
+    return `Your meal selection is as follows.  Your appetizer is ${menu._mealOne}. Your dinner is ${menu._mealTwo}.  Your desert is ${menu._mealThree}.`
+  }
+};
+
+console.log(menu.getRandomMeal());
